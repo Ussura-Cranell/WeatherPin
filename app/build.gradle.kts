@@ -58,6 +58,15 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
+    // https://mvnrepository.com/artifact/org.osmdroid/osmdroid-android
+    implementation(libs.osmdroid.android)
+
+    // https://mvnrepository.com/artifact/org.osmdroid/osmdroid-mapsforge
+    implementation(libs.osmdroid.mapsforge)
+    
+    // https://mvnrepository.com/artifact/androidx.preference/preference-ktx
+    implementation(libs.androidx.preference.ktx)
+
     // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
     implementation(libs.kotlinx.coroutines.core)
 
@@ -66,6 +75,5 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.jakewharton.timber/timber
     // implementation(libs.timber)
-
 
 }
