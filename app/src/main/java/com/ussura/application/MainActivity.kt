@@ -30,6 +30,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -174,12 +175,12 @@ fun NumberButton(number: Int) {
 @Composable
 fun CircularButton(modifier: Modifier = Modifier) {
     //val context = LocalContext.current
-    var color: Long by remember { mutableStateOf(Random.nextLong(0, 0xFF_FF_FF) or 0xFF_00_00_00)}
+    var color: Long by remember { mutableLongStateOf(Random.nextLong(0, 0xFF_FF_FF) or 0xFF_00_00_00) }
     Box(
         modifier = modifier
             .size(100.dp)
             .clip(CircleShape)
-            .background(Color(color.toLong()))
+            .background(Color(color))
             .clickable {
                 // Toast.makeText(context, "Push!", Toast.LENGTH_SHORT).show();
                 color = changeColor(color)
